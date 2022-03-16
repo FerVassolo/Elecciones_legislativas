@@ -27,6 +27,7 @@ public class main {
         System.out.println(JxC.getVotes());
 
         System.out.println(urna.nrodevotos());
+        System.out.println(urna.partidoganador());
 
 
 
