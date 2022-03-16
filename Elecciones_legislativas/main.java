@@ -30,8 +30,6 @@ public class main {
         System.out.println(urna.partidoganador());
 
 
-
-
     }
 
 }

@@ -66,7 +66,6 @@ public class Urna {
             return ganador.getName();
 
         }
-
     }
 }
 
