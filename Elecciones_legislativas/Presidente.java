@@ -1,9 +1,9 @@
 package Elecciones_legislativas;
 
-public class Presidente {
-    private String name;
+public class Presidente extends Persona{
 
-    public Presidente(String name_aux){
-        this.name = name_aux;
+    public Presidente(String name_aux)
+    {
+        super(name_aux);
     }
 }

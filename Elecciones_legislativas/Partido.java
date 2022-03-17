@@ -9,9 +9,11 @@ public class Partido {
         this.name = name;
         votos = 0;
     }
+
     public String getName(){
         return this.name;
     }
+
     public int getVotes(){
         return votos;
     }
