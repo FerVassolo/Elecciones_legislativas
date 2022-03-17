@@ -80,7 +80,7 @@ public class Urna {
                 else if(ganador2.getVotes() == ganador.getVotes())
                 {
                     lista_de_ganadores = new Partido[]{ganador, ganador2};
-                    return lista_de_ganadores[0].getName() + " y " + lista_de_ganadores[1].getName();
+                    return "Empate";
                 }
             }
             return ganador.getName();
