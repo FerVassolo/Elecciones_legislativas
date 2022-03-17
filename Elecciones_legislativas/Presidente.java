@@ -6,4 +6,5 @@ public class Presidente extends Persona{
     {
         super(name_aux);
     }
+
 }

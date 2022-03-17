@@ -6,4 +6,8 @@ public class Persona {
     public Persona(String name_aux){
         this.name = name_aux;
     }
+    public String getName()
+    {
+        return this.name;
+    }
 }
