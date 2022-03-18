@@ -2,12 +2,12 @@ package Elecciones_legislativas;
 
 public class Mesa {
     private Urna urna;
-    private Presidente presidente;
-    private Vicepresidente vicepresidente;
-    private Vocal vocal1;
-    private Vocal vocal2;
+    private String presidente;
+    private String vicepresidente;
+    private String vocal1;
+    private String vocal2;
 
-    public Mesa(Urna urna_aux,Presidente presidente_aux,Vicepresidente vicepresidente_aux,Vocal vocal1_aux, Vocal vocal2_aux){
+    public Mesa(Urna urna_aux,String presidente_aux,String vicepresidente_aux,String vocal1_aux, String vocal2_aux){
         this.urna = urna_aux;
         this.presidente = presidente_aux;
         this.vicepresidente = vicepresidente_aux;

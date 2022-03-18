@@ -17,6 +17,7 @@ public class Partido {
     public int getVotes(){
         return votos;
     }
+
     public void addVote(){
         votos++;
     }
