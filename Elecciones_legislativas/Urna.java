@@ -57,35 +57,46 @@ public class Urna {
 
     }
 
+
     public String partidoganador() {
-        {
 
             int i;
-            Partido ganador2 = partidos[0];
-            Partido ganador = partidos[0];
-            Partido[] lista_de_ganadores;
+            int j;
+            int k = 0;
+
+            //por default el primero de la lista comienza ganando
+            Partido ganador_parcial = partidos[0];
+            // El maximo de ganadores posibles es todos los partidos q hay (suponiendo un posible empate entre todos)
+            Partido[] lista_de_ganadores = new Partido[this.max_de_partidos];
+            lista_de_ganadores[0] = ganador_parcial;
 
             for (i = 1; i < partidos.length; i++)
-                if (partidos[i] != null && partidos[i].getVotes() > ganador.getVotes())
-                    ganador = partidos[i];
-
-                else if(partidos[i] != null && partidos[i].getVotes() == ganador.getVotes())
-                    ganador2 = partidos[i]; // Habría un empate parcial
-
-            if (ganador2 != ganador){
-                if (ganador2.getVotes() > ganador.getVotes())
-                {
-                    return ganador2.getName();
+                if (ganador_parcial.getVotes() - partidos[i].getVotes() < 0){
+                    ganador_parcial = partidos[i];
+                    lista_de_ganadores = new Partido[]{ partidos[i]}; // pasa a haber un solo ganador
                 }
-                else if(ganador2.getVotes() == ganador.getVotes())
-                {
-                    lista_de_ganadores = new Partido[]{ganador, ganador2};
-                    return "Empate";
+
+                else if (ganador_parcial.getVotes() - partidos[i].getVotes() == 0){
+                    for (j = 1; j < lista_de_ganadores.length; j++){
+                        if(lista_de_ganadores[j] == null){
+                            lista_de_ganadores[j] = partidos[i];
+                            break;
+                        }
+                    }
+                }
+
+            System.out.println("Los ganadores son: ");
+            for (i = 0; i < lista_de_ganadores.length - 1; i++) {
+                if (lista_de_ganadores[1] == null) {
+                    return lista_de_ganadores[0].getName();
+                } else if (lista_de_ganadores[i] != null) {
+                    System.out.println(lista_de_ganadores[i].getName());
+                    k = i + 1;
                 }
             }
-            return ganador.getName();
-
-        }
+            return "Hay un empate entre " + Integer.toString(k) + " partidos.";
     }
+
 }
+
 

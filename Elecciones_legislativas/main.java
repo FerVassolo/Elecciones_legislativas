@@ -27,6 +27,7 @@ public class main {
         miurna.votar(miboleta1);
         miurna.votar(miboleta3);
 
+
         // cantidad de boletas dentro de la urna:
         System.out.println(miurna.nrodevotos());
 
